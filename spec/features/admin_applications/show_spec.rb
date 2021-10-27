@@ -50,14 +50,6 @@ RSpec.describe 'show page' do
 
   end
 
-#   As a visitor
-# When there are two applications in the system for the same pet
-# When I visit the admin application show page for one of the applications
-# And I approve or reject the pet for that application
-# When I visit the other application's admin show page
-# Then I do not see that the pet has been accepted or rejected for that application
-# And instead I see buttons to approve or reject the pet for this specific application
-
   it "rejects or approves a pet on two different applications for one of the applications without removing the accept or reject buttons for the other application " do
     shelter = Shelter.create(name: 'Aurora shelter', city: 'Aurora, CO', foster_program: false, rank: 9)
     application = Application.create!(name: 'Ted', address: '11 revere dr.', city: 'salt lake', state: 'Colorado', zip_code: '60010', description: 'I love pets', status: 'Pending')
